@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+		"rect" : [ 157.0, 105.0, 640.0, 697.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,20 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 0.0, 0.0, 0.0 ],
+					"id" : "obj-14",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 298.0, 5.0, 150.0, 33.0 ],
+					"text" : "Remember to have the scaffolding file open!!!!!",
+					"textcolor" : [ 0.023529411764706, 0.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"linecount" : 5,
@@ -105,7 +119,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 811.0, 303.0, 73.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "<bach.roll>",
 					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
 				}
@@ -1109,6 +1122,27 @@
 , 			{
 				"name" : "bach.roll.mxo",
 				"type" : "iLaX"
+			}
+, 			{
+				"name" : "z.CMC-logo300dpi.2x.gif",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
+				"patcherrelativepath" : ".",
+				"type" : "GIFf",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "z.by-sa.2x.png",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
+				"patcherrelativepath" : ".",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "z.credits.v01.bp.maxpat",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ],
 		"autosave" : 0
