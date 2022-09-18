@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 107.0, 191.0, 1299.0, 715.0 ],
+		"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,62 +40,748 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontface" : 2,
+					"id" : "obj-31",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 5.0, 715.0, 595.0, 74.0 ],
+					"text" : "...But there are 2 problems with this\n1. Hear those \"clicks\"? We need a \"cleaner\" synth without clicks; and \n2. Notice we have TWO PARTS above... We should be hearing 2 notes at the same time, and other notes that overlap, but we only get 1 of those notes when we should hear two (this is also called \"monophonic\"). We need a version that will paly more than one note at the same time "
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-29",
-					"linecount" : 6,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 466.0, 618.166666666666742, 434.0, 87.0 ],
-					"text" : "<= Also, you can instantiate your own bach.roll object if you type \"bach.roll\" into an empty object box like this. But it won't look exactly like the one above; that's because we're using a bach.roll object that has been specially formatted for you to use. Therefore, it might be easiest to simply COPY and PASTE the bach.roll objects you find in these tutorial patches, CLEAR their contents, and recycle them over and over in your own patches...",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+					"patching_rect" : [ 829.0, 715.0, 150.0, 20.0 ],
+					"text" : "<= send out to patch"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-28",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 359.0, 618.166666666666742, 100.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
 					"id" : "obj-27",
-					"linecount" : 15,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 419.0, 5.0, 385.952475247524831, 208.0 ],
-					"text" : "Meet bach.roll, a friend to all sonic creators...\n\nbach.roll is what we might call a \"score editor\" that uses \"unmetered, proportional notation.\" That means you generally don't have to worry about rhythm; you can visualize your sequence of musical ideas using nothing but absolute, \"chronocentric\" time (i.e. minutes and seconds).\n\nYou can use bach.roll to display a MIDI file, such as the one inside the bach.roll object below, or you can use it to notate your OWN music...\n\nYou can also use it to PLAY your sequence of notes. For example, press the \"play\" button on the left (4th down in the list inside the <live.tab> object). Notice that a green scrollbar wipes across bach.roll and highlights each \"note\" as it plays. But you don't hear anything... We need something to \"synthesize\" our notes as they are played back.",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 386.0, 267.0, 264.0, 20.0 ],
-					"text" : "<= adjust the horizontal zoom (drag up or down)"
+					"patching_rect" : [ 739.0, 672.0, 150.0, 33.0 ],
+					"text" : "<= mono to stereo (no panning)"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 386.0, 244.0, 215.0, 20.0 ],
-					"text" : "<= adjust the vertical zoom (enter a %)"
+					"patching_rect" : [ 805.0, 626.0, 150.0, 33.0 ],
+					"text" : "<= Double-click to see subpatcher's contents"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 170.0, 632.0, 312.0, 47.0 ],
+					"text" : "Another way to monitor. Watch the Max Console (shift + cmd + M) as you play the sequence to view bach's output syntax (bach.print is excellent for debugging)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 811.0, 303.0, 73.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "<bach.roll>",
+					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 392.959264497878394, 243.0, 431.0, 47.0 ],
+					"text" : "1. Turn audio on (Illuminate <exdac> or enable <dac> in your out patch)\n2. Play the bach.roll\n3. Double-click on the subpatch called \"monophonic.synth\" (highlighted in RED)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 749.0, 715.0, 68.0, 22.0 ],
+					"text" : "send~ out2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 613.0, 715.0, 68.0, 22.0 ],
+					"text" : "send~ out1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 680.959264497878394, 672.0, 54.0, 22.0 ],
+					"text" : "*~ 0.707"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 3,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 59.0, 105.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-68",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 190.0, 578.0, 272.0, 33.0 ],
+									"text" : "<outlet>\n<= to volume controls and dac~ outputs from Max"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-66",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ -29.0, 445.0, 178.0, 60.0 ],
+									"text" : "simple cosine wave synth engine. Try replacing this with other waveforms you already know: saw~, tri~, rect~, etc."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-64",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 81.0, 401.0, 59.0, 20.0 ],
+									"text" : "<trigger>"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-62",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 580.0, 353.0, 150.0, 100.0 ],
+									"text" : "<function>\nOur familiar ADSR (attack sustain decay release) curve\n\nNotice that there is NO SUSTAIN turned on..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-60",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 461.333333333333371, 293.0, 39.0, 20.0 ],
+									"text" : "<m>"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-59",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 681.000000000000114, 306.0, 39.0, 20.0 ],
+									"text" : "<m>"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-57",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 415.0, 374.0, 150.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-55",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ -16.0, 293.0, 161.0, 20.0 ],
+									"text" : "convert from midicents to Hz"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-53",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 208.0, 242.0, 77.0, 33.0 ],
+									"text" : "<midicents>\npitch"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-51",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 431.333333333333371, 242.0, 69.0, 33.0 ],
+									"text" : "<duration> \nms"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-49",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 652.0, 242.0, 68.0, 33.0 ],
+									"text" : "<velocity>\nvolume"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-47",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 400.333333333333485, 137.0, 299.0, 74.0 ],
+									"text" : "<= <bach.playkeys> is a simple way to get the info we need to make our own synthesizers. @out t means it will return \"test output\" that we can use in our regular Max objects. Without @out t, we would get an encoded bach list (III)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-44",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.333333333333371, 154.0, 249.0, 20.0 ],
+									"text" : "[pitch-in-midicents duration velocity note-flag]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-41",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.333333333333371, 114.0, 293.0, 20.0 ],
+									"text" : "We're interested in the note_LLLL, always in this form"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-39",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.333333333333371, 79.0, 467.0, 20.0 ],
+									"text" : "note <voice_number> <MIDI channel> [<chord_onset> [<NOTE_LLLL>] <chord_flag>]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-36",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.333333333333371, 43.0, 317.0, 20.0 ],
+									"text" : "Playback syntax from bach.roll is always a list in this form:"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 190.0, 71.0, 150.0, 33.0 ],
+									"text" : "<= Playout (7th outlet) from <bach.roll>"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 190.0, 43.0, 46.0, 20.0 ],
+									"text" : "<inlet>"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 8.0, 13.0, 150.0, 20.0 ],
+									"text" : "Monophonic Synth Engine"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "float" ],
+									"patching_rect" : [ 593.0, 277.0, 39.0, 22.0 ],
+									"text" : "/ 127."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "signal", "bang" ],
+									"patching_rect" : [ 431.333333333333371, 463.0, 34.0, 22.0 ],
+									"text" : "line~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-20",
+									"index" : 1,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 151.0, 578.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 151.0, 531.0, 299.5, 22.0 ],
+									"text" : "*~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"addpoints" : [ 1.899657232169027, 0.0, 0, 62.688688661578034, 0.443466892999452, 0, 106.380805001465333, 0.228452641848203, 0, 283.048927593184658, 0.228452641848203, 0, 357.135559647776631, 0.0, 0 ],
+									"domain" : 357.14300537109375,
+									"id" : "obj-18",
+									"maxclass" : "function",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "float", "", "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 371.0, 353.0, 200.0, 100.0 ],
+									"range" : [ 0.0, 0.503937005996704 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 151.0, 445.0, 43.0, 22.0 ],
+									"text" : "cycle~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "float", "bang" ],
+									"patching_rect" : [ 151.0, 401.0, 29.5, 22.0 ],
+									"text" : "t f b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-15",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 151.0, 347.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 593.0, 306.0, 82.0, 22.0 ],
+									"text" : "setrange 0 $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 371.0, 293.0, 81.0, 22.0 ],
+									"text" : "setdomain $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 151.0, 293.0, 103.0, 22.0 ],
+									"text" : "bach.mc2f @out t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-8",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 593.0, 242.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-6",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 371.0, 242.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-4",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 151.0, 242.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 151.0, 137.0, 245.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"versionnumber" : 80105
+									}
+,
+									"text" : "bach.playkeys cents duration velocity @out t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-1",
+									"index" : 1,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 151.0, 48.0, 30.0, 30.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"midpoints" : [ 602.5, 339.0, 380.5, 339.0 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"midpoints" : [ 171.0, 430.0, 357.0, 430.0, 357.0, 348.0, 380.5, 348.0 ],
+									"source" : [ "obj-16", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"source" : [ "obj-17", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-22", 0 ],
+									"source" : [ "obj-18", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"midpoints" : [ 273.5, 228.0, 380.5, 228.0 ],
+									"source" : [ "obj-2", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"midpoints" : [ 386.5, 228.0, 602.5, 228.0 ],
+									"source" : [ "obj-2", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 1 ],
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"source" : [ "obj-24", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-24", 0 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 680.959264497878394, 626.0, 116.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p monophonic.synth"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 487.5, 632.0, 61.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"versionnumber" : 80105
+					}
+,
+					"text" : "bach.print"
 				}
 
 			}
@@ -162,19 +848,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 61.0, 66.0, 301.0, 20.0 ],
 					"text" : "<= load a MIDI or text file with musical sequence below"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 1,
-					"id" : "obj-18",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 731.952475247524831, 279.0, 73.0, 20.0 ],
-					"text" : "<bach.roll>",
-					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
 				}
 
 			}
@@ -305,8 +978,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 5.0, 246.0, 29.0 ],
-					"text" : "1.1 Introducing bach.roll"
+					"patching_rect" : [ 5.0, 5.0, 279.0, 29.0 ],
+					"text" : "2.1 Monophonic Synthesizer"
 				}
 
 			}
@@ -347,8 +1020,47 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"order" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"order" : 1,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
+					"source" : [ "obj-9", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 0,
+					"source" : [ "obj-9", 6 ]
 				}
 
 			}
@@ -356,6 +1068,11 @@
 		"parameters" : 		{
 			"obj-47" : [ "live.tab", "live.tab", 0 ],
 			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
 
 			}
 ,
@@ -363,29 +1080,35 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "bach.roll.mxo",
+				"name" : "bach.args.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "z.CMC-logo300dpi.2x.gif",
-				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
-				"patcherrelativepath" : ".",
-				"type" : "GIFf",
-				"implicit" : 1
+				"name" : "bach.expr.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "z.by-sa.2x.png",
-				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
-				"patcherrelativepath" : ".",
-				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "z.credits.v01.bp.maxpat",
-				"bootpath" : "~/Desktop/sound-synth-tech/week 2/interacting_with_bach_roll_starter_patches_v_1_export",
-				"patcherrelativepath" : ".",
+				"name" : "bach.mc2f.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../Documents/Max 8/Packages/bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.playkeys.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.portal.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.print.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.roll.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0
