@@ -233,7 +233,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1322.0, 924.5, 150.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "midicents (in bach) to hertz"
 				}
 
@@ -255,7 +254,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1174.0, 628.0, 117.0, 20.0 ],
+					"patching_rect" : [ 1174.0, 628.0, 121.0, 20.0 ],
 					"text" : "bach.roll @clefs ffgg "
 				}
 
@@ -982,7 +981,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.0, 635.0, 68.0, 22.0 ],
+					"patching_rect" : [ 40.5, 635.0, 68.0, 22.0 ],
 					"text" : "send~ out1"
 				}
 
