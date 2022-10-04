@@ -58,7 +58,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 342.0, 101.0, 85.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "15., 16. 10000"
 				}
 
@@ -95,7 +94,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 780.0, 397.0, 150.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "gain stage - changes loudness or softness"
 				}
 
@@ -120,7 +118,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 751.0, 473.0, 129.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "<= the bang just resends the list"
 				}
 
@@ -271,8 +268,9 @@
 				"box" : 				{
 					"id" : "obj-57",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 139.0, 601.0, 211.0, 22.0 ],
 					"text" : "interleave 2"
 				}
@@ -282,8 +280,9 @@
 				"box" : 				{
 					"id" : "obj-56",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "list", "list" ],
 					"patching_rect" : [ 139.0, 439.0, 211.0, 22.0 ],
 					"text" : "deinterleave 2"
 				}
@@ -326,12 +325,16 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-48",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 784.0, 63.0, 22.0 ],
-					"text" : "resdisplay"
+					"maxclass" : "resdisplay",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 479.0, 784.0, 300.0, 100.0 ]
 				}
 
 			}
@@ -343,7 +346,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 219.5, 203.0, 370.0, 33.0 ],
-					"presentation_linecount" : 4,
 					"text" : "<= drag slowly through time for smooth interpolation between SDIF frames; moves time backwards and forwards in the sound file"
 				}
 
@@ -434,8 +436,9 @@
 				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 139.0, 649.0, 66.0, 22.0 ],
 					"text" : "sinusoids~"
 				}
@@ -448,7 +451,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 357.0, 419.0, 33.0 ],
+					"patching_rect" : [ 211.0, 357.0, 422.0, 33.0 ],
 					"text" : "<= like ADSR for MANY sine waves: manages birth and death of each partial, creates amplitude envelope for any signal that is fed to it"
 				}
 
@@ -457,8 +460,9 @@
 				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 139.0, 357.0, 62.0, 22.0 ],
 					"text" : "threefates"
 				}
@@ -491,8 +495,9 @@
 				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "list", "" ],
 					"patching_rect" : [ 139.0, 312.0, 100.0, 22.0 ],
 					"text" : "SDIF-tuples louis"
 				}
@@ -610,8 +615,9 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 745.0, 189.0, 98.0, 22.0 ],
 					"text" : "SDIF-buffer louis"
 				}
@@ -619,6 +625,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-11", 0 ]
@@ -655,6 +668,41 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-39", 0 ]
 				}
@@ -678,8 +726,59 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"order" : 1,
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"order" : 0,
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"source" : [ "obj-58", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 1 ],
+					"source" : [ "obj-61", 0 ]
 				}
 
 			}
@@ -769,7 +868,35 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "SDIF-buffer.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "SDIF-tuples.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "deinterleave.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "interleave.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "resdisplay.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "sinusoids~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "threefates.mxo",
+				"type" : "iLaX"
+			}
+ ],
 		"autosave" : 0
 	}
 
