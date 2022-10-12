@@ -45,7 +45,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 96.0, 38.0, 150.0, 33.0 ],
+					"patching_rect" : [ 192.099999999999994, 150.0, 150.0, 33.0 ],
 					"text" : "audio to visual converter/ microphone"
 				}
 
@@ -186,7 +186,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 446.5, 302.0, 68.0, 20.0 ],
+					"patching_rect" : [ 554.5, 298.0, 68.0, 20.0 ],
 					"text" : "<playlist~>"
 				}
 
@@ -209,7 +209,7 @@
 					"originaltempo" : 0,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 283.100000000000023, 298.0, 150.0, 92.0 ],
+					"patching_rect" : [ 283.100000000000023, 298.0, 262.0, 141.0 ],
 					"pitchcorrection" : 0,
 					"quality" : 0,
 					"timestretch" : [ 0 ]
@@ -295,7 +295,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 58.900000000000006, 38.0, 35.0, 22.0 ],
+					"patching_rect" : [ 155.0, 150.0, 35.0, 22.0 ],
 					"text" : "adc~"
 				}
 
