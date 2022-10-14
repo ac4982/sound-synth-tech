@@ -40,6 +40,33 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 269.0, 190.0, 79.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "soprano \"u\" (ooo)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 6,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 269.0, 232.5, 151.0, 89.0 ],
+					"presentation_linecount" : 6,
+					"text" : ";\rone-vowel 1 350 0 40;\rone-vowel 2 600 -20 80;\rone-vowel 3 2400 -32 100;\rone-vowel 4 2675 -28 120;\rone-vowel 5 2950 -36 120"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-75",
 					"maxclass" : "spectroscope~",
 					"numinlets" : 2,
@@ -199,7 +226,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1202.0, 533.0, 62.0, 33.0 ],
+					"patching_rect" : [ 1202.0, 533.0, 64.0, 33.0 ],
 					"text" : "hz vibrato LFO"
 				}
 
@@ -345,7 +372,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1029.0, 29.0, 150.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "SOURCE / EXCITATION SIGNAL (GLOTTIS)"
 				}
 
@@ -767,7 +793,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 748.5, 505.0, 50.0, 35.0 ],
-					"text" : "1 1 1 1 1"
+					"text" : "0 0 0 0 0"
 				}
 
 			}

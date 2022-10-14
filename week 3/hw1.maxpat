@@ -40,12 +40,84 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 760.392402291297913, 121.0, 83.0, 22.0 ],
+					"text" : "loadmess 400"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 677.392402291297913, 46.0, 150.0, 60.0 ],
+					"text" : "Unsure why but setting the domain to a really integer makes it so that the clicking is decreased"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 300.113919734954834, 164.265822768211365, 50.0, 22.0 ],
+					"text" : "r carrier"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 408.316452741622925, 121.0, 69.0, 22.0 ],
+					"text" : "r modulator"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 408.316452741622925, 171.0, 83.0, 22.0 ],
+					"text" : "loadmess 900"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 303.316452741622925, 217.0, 90.0, 22.0 ],
+					"text" : "loadmess 1500"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-98",
 					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 913.924038648605347, 850.632900238037109, 150.0, 74.0 ],
+					"patching_rect" : [ 913.924038648605347, 850.632900238037109, 154.0, 74.0 ],
 					"text" : "The waveforms separate, then \"come together\", then separate once more, and finally \"come together\" in the end"
 				}
 
@@ -57,7 +129,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.316452741622925, 631.265822768211365, 150.0, 100.0 ],
+					"patching_rect" : [ 225.316452741622925, 631.265822768211365, 153.0, 100.0 ],
 					"text" : "Finally I multiply the product of the frequency of the captured note and the modulated phasor wave by the product of the carrier frequency through square wave"
 				}
 
@@ -82,7 +154,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 486.76880669593811, 148.265822768211365, 150.0, 74.0 ],
-					"presentation_linecount" : 5,
 					"text" : "Here I send a modulator frequency through a phasor waveform to an object that will multiply it by another frequency"
 				}
 
@@ -344,8 +415,8 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints" : [ 0.0, 0.0, 0, 18.445389760935559, 0.855021147727966, 0, 142.893273935673079, 0.905654058456421, 0, 183.000000000000028, 0.0, 0 ],
-					"domain" : 183.0,
+					"addpoints" : [ 0.0, 0.0, 0, 0.0, 0.0, 0, 77.888505763195823, 1.0, 0, 126.824675975961782, 0.443544303576152, 0, 307.67573980574906, 0.456877636909485, 0, 399.999999999999773, 0.0, 0 ],
+					"domain" : 400.0,
 					"id" : "obj-89",
 					"maxclass" : "function",
 					"numinlets" : 1,
@@ -413,18 +484,6 @@
 					"outlettype" : [ "signal", "bang" ],
 					"patching_rect" : [ 544.76880669593811, 382.265822768211365, 34.0, 22.0 ],
 					"text" : "line~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-101",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 407.26880669593811, 139.265822768211365, 69.0, 22.0 ],
-					"text" : "r modulator"
 				}
 
 			}
@@ -515,30 +574,18 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 303.392402291297913, 184.265822768211365, 50.0, 22.0 ],
-					"text" : "r carrier"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"source" : [ "obj-10", 0 ]
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-106", 0 ],
-					"source" : [ "obj-101", 0 ]
+					"destination" : [ "obj-59", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -565,7 +612,21 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-106", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -590,6 +651,13 @@
 					"destination" : [ "obj-103", 0 ],
 					"order" : 0,
 					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
