@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 106.0, 640.0, 595.0 ],
+		"rect" : [ 752.0, 271.0, 640.0, 595.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -194,8 +194,20 @@
 , 			{
 				"box" : 				{
 					"basictuning" : 0,
+					"clipheight" : 140.0,
 					"data" : 					{
-						"clips" : [  ]
+						"clips" : [ 							{
+								"absolutepath" : "/Users/crdn.adrian/Desktop/sound-synth-tech/media/RB.vox/RB.vox.sung.vowels.Bb3.wav",
+								"filename" : "RB.vox.sung.vowels.Bb3.wav",
+								"filekind" : "audiofile",
+								"id" : "u179009273",
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+ ]
 					}
 ,
 					"followglobaltempo" : 0,
@@ -495,9 +507,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }
