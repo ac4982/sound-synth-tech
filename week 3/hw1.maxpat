@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 972.0, 717.0 ],
+		"rect" : [ 253.0, 87.0, 972.0, 717.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "kslider",
+					"mode" : 2,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 836.392402291297913, 21.0, 336.0, 53.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -52,48 +65,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 677.392402291297913, 46.0, 150.0, 60.0 ],
-					"text" : "Unsure why but setting the domain to a really integer makes it so that the clicking is decreased"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.113919734954834, 164.265822768211365, 50.0, 22.0 ],
-					"text" : "r carrier"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 408.316452741622925, 121.0, 69.0, 22.0 ],
-					"text" : "r modulator"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 408.316452741622925, 171.0, 83.0, 22.0 ],
+					"patching_rect" : [ 411.936704993247986, 146.0, 83.0, 22.0 ],
 					"text" : "loadmess 900"
 				}
 
@@ -105,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 303.316452741622925, 217.0, 90.0, 22.0 ],
+					"patching_rect" : [ 303.392402291297913, 198.265822768211365, 90.0, 22.0 ],
 					"text" : "loadmess 1500"
 				}
 
@@ -129,7 +106,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.316452741622925, 631.265822768211365, 153.0, 100.0 ],
+					"patching_rect" : [ 225.316452741622925, 631.265822768211365, 155.0, 100.0 ],
 					"text" : "Finally I multiply the product of the frequency of the captured note and the modulated phasor wave by the product of the carrier frequency through square wave"
 				}
 
@@ -402,20 +379,7 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-88",
-					"maxclass" : "kslider",
-					"mode" : 2,
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 836.392402291297913, 20.265822768211365, 336.0, 53.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"addpoints" : [ 0.0, 0.0, 0, 0.0, 0.0, 0, 77.888505763195823, 1.0, 0, 126.824675975961782, 0.443544303576152, 0, 307.67573980574906, 0.456877636909485, 0, 399.999999999999773, 0.0, 0 ],
+					"addpoints" : [ 0.0, 0.0, 0, 0.0, 0.0, 0, 77.888505763195838, 1.0, 0, 126.824675975961782, 0.443544303576152, 0, 307.675739805749117, 0.456877636909485, 0, 399.999999999999773, 0.0, 0 ],
 					"domain" : 400.0,
 					"id" : "obj-89",
 					"maxclass" : "function",
@@ -605,6 +569,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-86", 0 ],
+					"source" : [ "obj-14", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-87", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
 					"source" : [ "obj-143", 0 ]
 				}
@@ -614,20 +592,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-106", 0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -735,6 +699,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-92", 0 ],
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-89", 0 ],
 					"source" : [ "obj-82", 0 ]
 				}
@@ -786,20 +757,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-85", 0 ],
 					"source" : [ "obj-87", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-86", 0 ],
-					"source" : [ "obj-88", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-87", 0 ],
-					"source" : [ "obj-88", 0 ]
 				}
 
 			}
