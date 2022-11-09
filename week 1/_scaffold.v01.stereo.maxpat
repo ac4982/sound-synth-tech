@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 84.0, 131.0, 640.0, 480.0 ],
+		"rect" : [ 152.0, 237.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,11 +40,22 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 65.0, 118.0, 82.0, 22.0 ],
+					"text" : "ac.midi.in.v01"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 44.0, 52.0, 22.0 ],
+					"patching_rect" : [ 65.0, 81.0, 52.0, 22.0 ],
 					"text" : "inclass1"
 				}
 
@@ -63,15 +74,29 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
+				"name" : "RB.vox.sung.vowels.Bb3.wav",
+				"bootpath" : "~/Desktop/sound-synth-tech/media/RB.vox",
+				"patcherrelativepath" : "../media/RB.vox",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ac.midi.in.v01.maxpat",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 1",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "ac.sound.out.v01.maxpat",
-				"bootpath" : "~/Desktop/Code Music Class",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "inclass1.maxpat",
-				"bootpath" : "~/Desktop/Code Music Class",
+				"bootpath" : "~/Desktop/sound-synth-tech/week 1",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
