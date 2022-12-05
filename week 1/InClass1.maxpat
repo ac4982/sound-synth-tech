@@ -40,6 +40,17 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 53.0, 459.0, 83.0, 22.0 ],
+					"text" : "s test.sound.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-37",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -451,6 +462,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"order" : 2,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
